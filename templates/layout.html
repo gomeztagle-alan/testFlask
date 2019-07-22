@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet'>
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+		<div class="container">
+        <h1 class="title">BookVis - Flask Demo</h1>
+		</div>
+
+	<!-- GitHub embedded Link --!>
+	<a href="https://github.com/JoshRosner101/BookVIS-Final-Project">
+		<img src = '../static/img/GitHub_Logo.png' width="100" height="50" style='float:left'>
+      </div>
+	</a>
+	<!-- Nav Panel --!>
+		<div class="container">
+	<a class="btn btn-primary btn-xl js-scroll-trigger" href="/index">
+
+	Home
+
+        </a>
+        <a class="btn btn-primary btn-xl js-scroll-trigger" href="/login">
+
+	Login
+
+        </a>
+        <a class="btn btn-primary btn-xl js-scroll-trigger" href="/dashboard">
+
+	Dashboard
+
+        </a>
+		</div>
+    </header>
+
+        
+
+    
+    {% block content %}
+    {% endblock %}
+    
+  </body>
+</html>

@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <main class="container signup-section">
+    <div class="section-content">
+      <h2>Login</h2>
+      <h3> **WARNING -THIS IS A PROOF OF CONCEPT- DO NOT INPUT YOUR ACTUAL INFORMATION**</h3>
+
+      <form method="POST" action="/login">
+        {{ form.hidden_tag() }}
+
+        <div class="form-group">
+          {{ form.email_address.label }}
+
+          {% if form.email_address.errors %}
+            {% for error in form.email_address.errors %}
+              <p class="error-message">{{ error }}</p>
+            {% endfor %}
+          {% endif %}
+
+          {{ form.email_address }}
+        </div>
+
+        <div class="form-group">
+            {{ form.password.label }}
+
+            {% if form.password.errors %}
+                {% for error in form.password.errors %}
+                <p class-"error-message">{{ error }}</p>
+                {% endfor %}
+            {% endif %}
+
+            {{ form.password(class="form-control") }}
+        </div>
+        
+        <a class="btn btn-primary btn-xl js-scroll-trigger" href="/dashboard">
+		Login
+	</a>
+      </form>
+    </div>
+  </main>
+{% endblock %}

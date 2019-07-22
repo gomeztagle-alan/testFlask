@@ -1,0 +1,10 @@
+dashBoard.html
+
+Should Include:
+
+- 3 Placeholders(Bar, Timeline, Forcegraph) -> Joshua
+- Display Info box
+	- Author info
+	- Title info
+	- Book info
+- Cute Camerca Icon at the bottom(optional)
